@@ -2,9 +2,9 @@
 default_filename = 'a.txt'
 output_filename='out.txt'
 
-def print_write_file(file_obj,print_args):
-    print(print_args)
-    print(print_args, file=file_obj)
+def print_write_file(file_obj,*print_args):
+    print(*print_args)
+    print(*print_args, file=file_obj)
 
 
 def read_text_from_file(filename):
@@ -71,6 +71,6 @@ while answer == 'y' or answer == 'Y':
     answer = input('Again? [Y/n]: ')
     if not answer:
         answer = 'y'
-    print()
+    print_write_file(out_file)
 out_file.close()
 print('Bye, bye!\n')
