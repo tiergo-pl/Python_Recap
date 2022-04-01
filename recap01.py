@@ -1,7 +1,6 @@
 def multiply(a: int, b: int) -> int:
     return a*b
 
-
 answer = 'y'
 while answer == 'y' or answer == 'Y':
     print('Give two numbers:\nx= ', end='')
